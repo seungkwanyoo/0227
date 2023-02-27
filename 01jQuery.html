@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>03jQuery</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+<script>
+// $(document).ready (function() { code기술 클릭,날짜datapicker(),slideToggle()});
+$(document).ready(function(){
+  $('#btn1').click(function(){
+    //css 배경색 pink, border
+    $('#btn1').css('background','pink');
+    $('#btn1').css('border','1px solid yellow');
+    $('#btn1').css('height','70px');
+    $('#btn1').css('width','100px');
+    $('#display').text('<h2>button1 눌렸습니다- 문자열 길동</h2>');
+    // $('#display').html('<h2>button1 눌렸습니다- html태그 길동</h2>');
+
+    // document.getElementById('display').innerText='<h2> button1 문자열 1시36분 1시 39분</h2>'
+    // document.getElementById('display').innerHTML='<h2> button1 html태그 1시36분 1시 39분</h2>'
+  });//end
+
+  $('#btn2_myspring').on('click',function(){
+    $(this).css({
+      'background':'orange','border':'1px solid black','height':'70px','width':'100px'
+    });
+    $('#display').text('button2 눌렸습니다');
+  });//end
+
+  $('#btn3').click(function(){
+    $('#btn3').css({
+      'background':'#abcdef','border':'1px solid yellow','height':'70px','width':'100px','color':'#ff00ff'
+    });
+    $('#display').html('<h2>button3 눌렸습니다- 문자열 길동</h2>');
+    // $('#display').html('<h2>button1 눌렸습니다- html태그 길동</h2>');
+  });//end
+
+  $('#btn4').click(function(){
+    $('#display').css({'background':'yellow','font-size':'20px','color':'red'});
+    $('#display').text('display영역입니다')
+    // $('#display').text('display영역입니다').css({'background':'yellow','font-size':'20px','color':'red'});
+  });
+});//제이쿼리시작 끝
+</script>
+</head>
+<body>
+ <h2>03jQuery.html</h2>
+<input type="button" id="btn1" value="버튼1">
+<input type="button" id="btn2_myspring" value="버튼2">
+<input type="button" id="btn3" value="버튼3"> <br>
+<input type="button" id="btn4" value="버튼4">
+<input type="button" id="btn5" onclick="location.reload()" value="버튼5=로드">
+<input type="button" id="btn6" value="버튼6">
+<p></p>
+<div id="display"></div>
+</body>
+</html>

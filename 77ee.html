@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    function bbb(){
+    
+    let height1= document.getElementById('height').value;
+    let weight1= document.getElementById('weight').value;
+
+    let ki=Number(height1);
+    let kg=Number(weight1);
+    let bi=((ki/100)*(ki/100));
+    bmi=kg/bi;
+    if(bmi>=20){totalresult='정상'}
+    else if(bmi>=25){totalresult='과체중'}
+    else if(bmi>=30){totalresult='비만'}
+    else if(bmi>=40){totalresult='고도비만'}
+    else{totalresult='저체중'}
+
+    document.getElementById('result').innerHTML='비만도= '+Math.round(bmi*100)/100+' 상태= '+totalresult;
+
+    
+}
+</script>
+</head>
+<body >
+    본인키입력 <input type="number" id="height" value="190" /><br />
+    몸무게입력 <input type="number" id="weight" value="87" />
+    <button id="btn" onclick="bbb()">결과보기버튼</button>
+    <div id="result"></div>
+</body>
+</html>

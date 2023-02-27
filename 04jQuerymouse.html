@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>04jQuery</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <style>
+    *{font-size: 14pt;}
+    a{text-decoration: none;}
+    .btncolor { background-color: hotpink;}
+    .btncolorover{background-color: orange;}
+    .btncolorout{background-color: orchid;}
+  </style>
+<script>
+// $(document).ready (function() { code기술 클릭,날짜datapicker(),slideToggle()});
+$(document).ready(function(){
+$("button").mouseover(function(){ //over==enter
+    $(this).addClass("btncolor");
+});
+
+$("button").mouseout(function(){ //out==leave
+    $(this).removeClass("btncolor");
+  });//end
+
+$('#btn1').click(function(){
+    $('#display').text('음악감상입니다');
+});
+
+$('#btn2').click(function(){
+   $('#display').text('야구장가기');
+});
+
+$('#btn3').click(function(){
+   $('#display').text('공부하기');
+});
+
+});//제이쿼리시작 끝
+</script>
+</head>
+<body>
+ <h2>04jQuery.html</h2>
+<button id="btn1">음악감상</button>
+<button id="btn2">야구관람</button>
+<button id="btn3">공부하기</button>
+<button onclick="location.reload()">현재문서로드</button>
+
+<p></p>
+<div id="display"></div>
+</body>
+</html>
